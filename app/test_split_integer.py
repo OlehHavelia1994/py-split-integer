@@ -6,21 +6,22 @@ def test_sum_of_the_parts_should_be_equal_to_value() -> None:
 
 
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
-    value = 6
-    number_of_parts = 2
-    res = split_integer(value, number_of_parts)
-    assert len(res) == number_of_parts
-    assert sum(res) == value
-    assert res == [3,3]
-
+    assert split_integer(6, 2) == [3, 3]
+    # value = 6
+    # number_of_parts = 2
+    # res = split_integer(value, number_of_parts)
+    # assert len(res) == number_of_parts
+    # assert sum(res) == value
+    # assert res == [3, 3]
 
 
 def test_should_return_part_equals_to_value_when_split_into_one_part() -> None:
-    number_of_parts = 1
-    value = 8
-    res = split_integer(value, number_of_parts)
-    assert len(res) == number_of_parts
-    assert sum(res) % len(res) == 0
+    assert split_integer(8, 1) == [8]
+    # number_of_parts = 1
+    # value = 8
+    # res = split_integer(value, number_of_parts)
+    # assert len(res) == number_of_parts
+    # assert sum(res) % len(res) == 0
 
 
 def test_parts_should_be_sorted_when_they_are_not_equal() -> None:
